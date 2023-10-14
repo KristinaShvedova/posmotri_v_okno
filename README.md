@@ -1,2 +1,19 @@
-# **posmotri-v-okno**
-## *Проект создан на основе курсов от Яндекса Практикума с помощью технологий HTML и CSS*
+# Проект: Посмотри в окно
+
+### Обзор
+* Интро
+* Figma
+
+**Интро**
+
+Проект был создан с помощью HTML, JavaScript и Figma.
+В Фигме расположен макет, в котором видно, как проект должен выглядеть.
+
+**Figma**
+
+* [Ссылка на макет в Figma](https://www.figma.com/file/QHcvX1RsUI89CulRB7HLk6/%234-%D0%9F%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80%D0%B8-%D0%B2-%D0%BE%D0%BA%D0%BD%D0%BE?node-id=0%3A1&mode=dev)
+
+**Git Pages**
+
+* [Ссылка на страницу в Git Pages](https://github.com/KristinaShvedova/posmotri_v_okno.git)
+
