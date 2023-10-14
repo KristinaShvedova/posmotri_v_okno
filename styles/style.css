@@ -30,6 +30,8 @@ blockquote,
 fieldset {
   margin: 0;
   padding: 0;
+  /*нет рамки у подписей*/
+  border: none;
 }
 
 ul,
@@ -73,15 +75,46 @@ ol {
 }
 
 .search-form {
+  /*контейнер всех 3ёх текстов*/
   display: flex;
   flex-direction: row;
   /*justify-content: space-between;*/
+  width: fit-content;
+  /*шрифт толще нужного*/
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-
 .search-form__fieldset {
+  /*контейнер текста*/
   margin: 0px 40px;
   width: 212px;
+}
+
+.search-form__fieldset-title {
+/*заголовок*/
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin: 0px 0px 5px;
+}
+
+.search-form__label-text {
+/*спб например*/
+}
+
+.search-form__textfield {
+  /*спб например текст*/
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: #1b1919;
+  /*240 вместо 225 иначе р не видна*/
+  width: 240px;
 }
 
 .search-form__fieldset:first-of-type {
@@ -90,6 +123,7 @@ ol {
 }
 
 .search-form__submit-button {
+  /*кнопка НАЙТИ*/
   width: 194px;
   max-height: 34px;
   text-align: center;
@@ -100,10 +134,13 @@ ol {
   color: white;
   background-color: #1b1919;
   border: 1px solid #FFF;
+  cursor: pointer;
+  margin: 20px 0px 0px;
 }
 
 .content__details {
-  max-width: 399px;
+  /*max width*/
+  width: 399px;
 }
 
 .title {
@@ -125,12 +162,18 @@ ol {
 .content__list {
   display: flex;
   flex-direction: column;
-  /*скролл для него*/
+  /*скролл вертикальный для него*/
   overflow-y: scroll;
+  /*скролл горизонтальный скрыли*/
+  overflow-x: hidden;
+  max-width: 399px;
   margin: 0px;
   /*вертикальный размер*/
-  max-height: 230px;
-  
+  max-height: 290px;
+}
+
+.content__list-item {
+  max-width: 399px;
 }
 
 .content__video-card {
@@ -140,7 +183,10 @@ ol {
 }
 
 .content__video-card-description-container {
+  /*контейнер с подписями карточек*/
   width: 200px;
+  /*убрали подсветку синюю у текста*/
+  text-decoration: none;
 }
 
 .content__video-card-title {
@@ -155,7 +201,6 @@ ol {
 }
 
 .content__video-card-description {
-  /*убрать синий цвет*/
   color: #FFF;
   font-family: Fira Sans Condensed;
   font-size: 18px;
@@ -166,9 +211,10 @@ ol {
 }
 
 .more-button {
-  /*убрать его из скролла он в него не входит*/
+  /*показать ещё*/
   width: 399px;
   height: 34px;
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -181,11 +227,13 @@ ol {
   font-weight: 700;
   line-height: normal;
   border: 1px solid #FFF;
+  cursor: pointer;
 }
 
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
+  margin: 0px 2px 0px 0px;
 }
 
 .visually-hidden {
