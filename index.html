@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Посмотри в окно</title>
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/preloader.css" />
-    <link rel="stylesheet" href="./styles/error.css" />
+    <link rel="stylesheet" href="./fonts/fonts.css"/>
+    <link rel="stylesheet" href="./styles/style.css"/>
+    <link rel="stylesheet" href="./styles/preloader.css"/>
+    <link rel="stylesheet" href="./styles/error.css"/>
   </head>
   <body class="page">
 
@@ -44,7 +44,7 @@
                   value="morning"
                   class="search-form__checkbox visually-hidden"
                 />
-                <span class="search-form__pseudo-checkbox"></span>
+                <span class="search-form__pseudo-checkbox "></span>
                 <span class="search-form__label-text">Утро</span>
               </label>
               <label class="search-form__label">
@@ -53,8 +53,10 @@
                   name="time"
                   value="afternoon"
                   class="search-form__checkbox visually-hidden"
-                />
-                <span class="search-form__pseudo-checkbox"></span>
+                /> 
+                <span class="search-form__pseudo-checkbox">
+                  <span class="search-form__pseudo-checkbox-full"></span>
+                </span>
                 <span class="search-form__label-text">День</span>
               </label>
               <label class="search-form__label">
@@ -82,6 +84,7 @@
         </h1>
         <ul class="content__list">
           <!-- ЗДЕСЬ ОКАЖУТСЯ ТЕМПЛЕЙТЫ КАРТОЧЕК -->
+
           <template class="preloader-template">
             <div class="preloader">
               <div class="preloader-chasing-squares">
@@ -116,6 +119,7 @@
               <h2 class="error__title"></h2>
             </div>
           </template>
+
         </ul>
       </section>
     </main>
