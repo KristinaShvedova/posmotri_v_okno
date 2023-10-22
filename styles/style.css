@@ -1,13 +1,9 @@
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
-
 html {
   block-size: 100%;
 }
-
 .page {
   inline-size: 1200px;
   block-size: 100%;
@@ -17,323 +13,273 @@ html {
   font-size: 18px;
   background-color: #1b1919;
 }
-
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-blockquote,
-fieldset {
+h1, h2, h3, h4, p, ul, ol, li, blockquote, fieldset {
   margin: 0;
   padding: 0;
-  /*нет рамки у подписей*/
+ /*нет рамки у подписей*/
   border: none;
 }
-
 h1:hover {
   opacity: 0.5;
 }
-
-ul,
-ol {
+ul, ol {
   list-style: none;
 }
-
-/*границы
-* {
-  outline: 1px solid red; */
-
-*a {
-  text-decoration: none;
-}
-
-.result {
-  /*между видео и словами справа*/
-  margin: 0px 30px 0px 0px;
-}
-
-.content {
-  display: flex;
-  flex-direction: row;
-  /*стоит посередине page*/
-  margin: 133px auto;
-  justify-content: center;
-
-}
-
-.result__video-container {
-  padding: 0px;
-  /*отступ чтоб ПО торчало выше 1/3 от высоты текста посмотри в окно*/
-  margin: 70px 0px 16px;
-  max-height: 386px;
-  cursor: pointer;
-}
-
-.result__video {
-  width: 711px;
-  max-height: 386px;
-}
-
-.result__video:hover {
-  opacity: 0.5;
-}
-
-.search-form {
-  /*контейнер всех 3ёх текстов*/
-  display: flex;
-  flex-direction: row;
-  /*justify-content: space-between;*/
-  width: fit-content;
-  /*шрифт толще нужного*/
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.search-form__fieldset {
-  /*контейнер текста*/
-  margin: 0px 40px;
-  width: 212px;
-}
-
-.search-form__fieldset-title {
-/*заголовки город и время*/
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin: 0px 0px 5px;
-}
-
-.search-form__fieldset-title:hover {
-  opacity: 0.5;
-}
-
-.search-form__checkbox-list {
-/*контейнер*/
-display: flex;
-justify-content: space-between;
-}
-
-.search-form__label {
-  /*встали в один ряд квадраты и утро день ночь*/
-  display: flex;
-  flex-direction: row;
-}
-
-.search-form__pseudo-checkbox {
-  display: block;
-  width: 19px;
-  height: 19px;
-  background-color: #1B1919;
-  border: 1px solid white;
-  margin: 0px 5px 0px 0px;
-}
-
-.search-form__pseudo-checkbox:hover {
-  opacity: 0.5;
-}
-
-.search-form__pseudo-checkbox-full {
-  display: block;
-  width: 15px;
-  height: 15px;
-  background-color: white;
-  margin: 1px;
-}
-
-.search-form__label-text {
-/*текст утро день ночь*/
-height: 22px;
-text-decoration: none;
-cursor: pointer;
-}
-
-.search-form__label-text:hover {
-  opacity: 0.5;
-}
-
-.search-form__textfield {
-  /*спб например текст*/
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  background-color: #1b1919;
-  /*240 вместо 225 иначе р не видна*/
-  width: 240px;
-  /*подчеркивания*/
-  border-top: 1px solid #FFF;
-  border-bottom: 1px solid #FFF;
-  border-right: none;
-}
-
-.search-form__textfield:hover {
-  opacity: 0.5;
-}
-
-.search-form__fieldset:first-of-type {
-  margin: 0px;
-  width: 225px;
-}
-
-.search-form__submit-button {
-  /*кнопка НАЙТИ*/
-  width: 194px;
-  max-height: 34px;
-  text-align: center;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  color: white;
-  background-color: #1b1919;
-  border: 1px solid #FFF;
-  cursor: pointer;
-  margin: 20px 0px 0px;
-}
-
-.search-form__submit-button:hover {
-  opacity: 0.5;
-}
-
-.content__details {
-  /*max width*/
-  width: 399px;
-}
-
-.title {
-  width: 260px;
-  height: 210px;
-  margin: 0px 0px 26px 0px;
-  font-family: Oswald;
-  font-size: 75px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 94%;
-  text-transform: uppercase;
-}
-
-.content__accent {
-  color: #545050;
-}
-
-.content__list {
-  display: flex;
-  flex-direction: column;
-  /*скролл вертикальный для него*/
-  overflow-y: scroll;
-  /*скролл горизонтальный скрыли*/
-  overflow-x: hidden;
-  max-width: 399px;
-  margin: 0px;
-  /*вертикальный размер*/
-  max-height: 290px;
-}
-
-.content__list-item {
-  max-width: 399px;
-}
-
-.content__video-card {
-  display: flex;
-  flex-direction: row;
-  margin: 0px 0px 30px 0px;
-}
-
-.content__video-card-description-container {
-  /*контейнер с подписями карточек*/
-  width: 200px;
-  /*убрали подсветку синюю у текста*/
-  text-decoration: none;
-}
-
-.content__video-card-title {
-  /* заголовок карточки */
-  color: #FFF;
-  font-family: Oswald;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%;
-  text-transform: uppercase;
-  /*подчеркивания не убираются поэтому их цвет - фоновый цвет*/
-  text-decoration: underline;
-  text-decoration-color: #1B1919;
-  cursor: pointer;
-  /*надпись ЗЕЛЕНГОГРАДСК разделить на несколько строк*/
-  white-space: wrap;
-}
-
-.content__video-card-title:hover {
-  opacity: 0.5;
-}
-
-.content__video-card-description {
-  /* подзаголовок карточки */
-  color: #FFF;
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 16.2px;
-  /*подчеркивания не убираются поэтому их цвет - фоновый цвет*/
-  text-decoration: underline;
-  text-decoration-color: #1B1919;
-  cursor: pointer;
-}
-
-.content__video-card-description:hover {
-  opacity: 0.5;
-}
-
-.more-button {
-  /*показать ещё*/
-  width: 399px;
-  height: 34px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
-  background-color: #1b1919;
-  color: #FFF;
-  text-align: center;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  border: 1px solid #FFF;
-  cursor: pointer;
-}
-
-.more-button:hover {
-  opacity: 0.5;
-}
-
-.content__video-card-thumbnail {
-  /* картинки в фотокарточках */
-  object-fit: fill;
-  height: 103px;
-  /*width: 194px;*/
-  margin: 0px 2px 0px 0px;
-}
-
-.content__video-card-thumbnail:hover {
-  opacity: 0.5;
-}
-
-.visually-hidden {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
-}
+/*границы * {
+  outline: 1px solid red;
+  */
+  *a {
+    text-decoration: none;
+ }
+  .content {
+    display: flex;
+    flex-direction: row;
+   /*стоит посередине page*/
+    margin: 133px auto;
+    justify-content: center;
+ }
+  .result {
+   /*между видео и словами справа*/
+    margin: 0px 30px 0px 0px;
+ }
+  .result__video-container {
+    padding: 0px;
+   /*отступ чтоб ПО торчало выше 1/3 от высоты текста посмотри в окно*/
+    margin: 70px 0px 16px;
+    max-height: 386px;
+    cursor: pointer;
+ }
+  .result__video {
+    width: 711px;
+    max-height: 386px;
+ }
+  .result__video:hover {
+    opacity: 0.5;
+ }
+  .search-form {
+   /*контейнер всех 3ёх текстов*/
+    display: flex;
+    flex-direction: row;
+   /*justify-content: space-between;
+    */
+    width: fit-content;
+   /*шрифт толще нужного*/
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+ }
+  .search-form__fieldset {
+   /*контейнер текста*/
+    margin: 0px 40px;
+    width: 212px;
+ }
+  .search-form__fieldset-title {
+   /*заголовки город и время*/
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px 0px 5px;
+ }
+  .search-form__fieldset-title:hover {
+    opacity: 0.5;
+ }
+  .search-form__checkbox-list {
+   /*контейнер*/
+    display: flex;
+    justify-content: space-between;
+ }
+  .search-form__label {
+   /*встали в один ряд квадраты и утро день ночь*/
+    display: flex;
+    flex-direction: row;
+ }
+  .search-form__label-text {
+   /*текст утро день ночь*/
+    height: 22px;
+    text-decoration: none;
+    cursor: pointer;
+ }
+  .search-form__label-text:hover {
+    opacity: 0.5;
+ }
+  .search-form__textfield {
+   /*спб например текст*/
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: #1b1919;
+   /*240 вместо 225 иначе р не видна*/
+    width: 240px;
+   /*подчеркивания*/
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+    border-right: none;
+ }
+  .search-form__textfield:hover {
+    opacity: 0.5;
+ }
+  .search-form__fieldset:first-of-type {
+    margin: 0px;
+    width: 225px;
+ }
+  .visually-hidden {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+ }
+  .search-form__pseudo-checkbox {
+    display: block;
+    width: 19px;
+    height: 19px;
+    background-color: #1B1919;
+    border: 1px solid white;
+    margin: 0px 5px 0px 0px;
+ }
+  .search-form__pseudo-checkbox:hover {
+    opacity: 0.5;
+ }
+  .search-form__pseudo-checkbox-full {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    margin: 1px;
+ }
+  .search-form__submit-button {
+   /*кнопка НАЙТИ*/
+    width: 194px;
+    max-height: 34px;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: white;
+    background-color: #1b1919;
+    border: 1px solid #FFF;
+    cursor: pointer;
+    margin: 20px 0px 0px;
+ }
+  .search-form__submit-button:hover {
+    opacity: 0.5;
+ }
+  .content__details {
+   /*max width*/
+    width: 399px;
+ }
+  .title {
+    width: 260px;
+    height: 210px;
+    margin: 0px 0px 26px 0px;
+    font-family: Oswald;
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 94%;
+    text-transform: uppercase;
+ }
+  .content__accent {
+    color: #545050;
+ }
+  .content__list {
+    display: flex;
+    flex-direction: column;
+   /*скролл вертикальный для него*/
+    overflow-y: scroll;
+   /*скролл горизонтальный скрыли*/
+    overflow-x: hidden;
+    max-width: 399px;
+    margin: 0px;
+   /*вертикальный размер*/
+    max-height: 290px;
+ }
+  .content__list-item {
+    max-width: 399px;
+ }
+  .content__video-card {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 0px 30px 0px;
+ }
+  .content__video-card-description-container {
+   /*контейнер с подписями карточек*/
+    width: 200px;
+   /*убрали подсветку синюю у текста*/
+    text-decoration: none;
+ }
+  .content__video-card-title {
+   /* заголовок карточки */
+    color: #FFF;
+    font-family: Oswald;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: uppercase;
+   /*подчеркивания не убираются поэтому их цвет - фоновый цвет*/
+    text-decoration: underline;
+    text-decoration-color: #1B1919;
+    cursor: pointer;
+   /*надпись ЗЕЛЕНГОГРАДСК разделить на несколько строк*/
+    white-space: wrap;
+ }
+  .content__video-card-title:hover {
+    opacity: 0.5;
+ }
+  .content__video-card-description {
+   /* подзаголовок карточки */
+    color: #FFF;
+    font-family: Fira Sans Condensed;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16.2px;
+   /*подчеркивания не убираются поэтому их цвет - фоновый цвет*/
+    text-decoration: underline;
+    text-decoration-color: #1B1919;
+    cursor: pointer;
+ }
+  .content__video-card-description:hover {
+    opacity: 0.5;
+ }
+  .content__video-card-thumbnail {
+   /* картинки в фотокарточках */
+    object-fit: fill;
+    height: 103px;
+   /*width: 194px;
+    */
+    margin: 0px 2px 0px 0px;
+ }
+  .content__video-card-thumbnail:hover {
+    opacity: 0.5;
+ }
+  .more-button {
+   /*показать ещё*/
+    width: 399px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    background-color: #1b1919;
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: 1px solid #FFF;
+    cursor: pointer;
+ }
+  .more-button:hover {
+    opacity: 0.5;
+ }
+  
