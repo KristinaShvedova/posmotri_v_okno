@@ -28,6 +28,8 @@ ul, ol {
 
 /*границы outline: 1px solid red; */
 
+/*:focus и focus-visible { outline: 1px solid white; }*/
+
 *a {
   text-decoration: none;
 }
@@ -60,9 +62,6 @@ ul, ol {
  /*контейнер всех 3ёх текстов*/
   display: flex;
   flex-direction: row;
- /*justify-content: space-between;
-  */
-  width: fit-content;
  /*шрифт толще нужного*/
   font-size: 18px;
   font-style: normal;
@@ -97,7 +96,7 @@ ul, ol {
 }
 .search-form__label-text {
  /*текст утро день ночь*/
-  height: 22px;
+  min-height: 22px;
   text-decoration: none;
   cursor: pointer;
 }
@@ -155,7 +154,7 @@ ul, ol {
 .search-form__submit-button {
  /*кнопка НАЙТИ*/
   width: 194px;
-  max-height: 34px;
+  min-height: 34px;
   text-align: center;
   font-size: 18px;
   font-style: normal;
@@ -167,6 +166,9 @@ ul, ol {
   cursor: pointer;
   margin: 20px 0px 0px;
 }
+.search-form__submit-button:focus-visible {
+  outline: 3px solid tomato;
+}
 .search-form__submit-button:hover {
   opacity: 0.5;
 }
@@ -176,7 +178,7 @@ ul, ol {
 }
 .title {
   width: 260px;
-  height: 210px;
+  min-height: 210px;
   margin: 0px 0px 26px 0px;
   font-family: Oswald;
   font-size: 75px;
@@ -203,6 +205,9 @@ ul, ol {
 .content__list-item {
   max-width: 399px;
 }
+.content__list-item:focus {
+  outline: 3px solid tomato;
+}
 .content__video-card {
   display: flex;
   flex-direction: row;
@@ -213,6 +218,9 @@ ul, ol {
   width: 200px;
  /*убрали подсветку синюю у текста*/
   text-decoration: none;
+}
+.content__video-card-description-container:focus-visible {
+  outline: 3px solid tomato;
 }
 .content__video-card-title {
  /* заголовок карточки */
@@ -253,8 +261,7 @@ ul, ol {
  /* картинки в фотокарточках */
   object-fit: fill;
   height: 103px;
- /*width: 194px;
-  */
+ /*width: 194px;*/
   margin: 0px 2px 0px 0px;
 }
 .content__video-card-thumbnail:hover {
@@ -263,7 +270,7 @@ ul, ol {
 .more-button {
  /*показать ещё*/
   width: 399px;
-  height: 34px;
+  min-height: 34px;
   display: flex;
   justify-content: center;
   align-items: center;
