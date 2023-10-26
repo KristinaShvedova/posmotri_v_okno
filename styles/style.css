@@ -28,8 +28,6 @@ ul, ol {
 
 /*границы outline: 1px solid red; */
 
-/*:focus и focus-visible { outline: 1px solid white; }*/
-
 *a {
   text-decoration: none;
 }
@@ -55,9 +53,6 @@ ul, ol {
   width: 711px;
   max-height: 386px;
 }
-.result__video:hover {
-  opacity: 0.5;
-}
 .search-form {
  /*контейнер всех 3ёх текстов*/
   display: flex;
@@ -81,9 +76,6 @@ ul, ol {
   line-height: normal;
   margin: 0px 0px 5px;
 }
-.search-form__fieldset-title:hover {
-  opacity: 0.5;
-}
 .search-form__checkbox-list {
  /*контейнер*/
   display: flex;
@@ -94,6 +86,15 @@ ul, ol {
   display: flex;
   flex-direction: row;
 }
+
+/*фокусы отображаются в инструментах страницы*/
+.search-form__label:focus {
+  outline: none;
+}
+.search-form__label:focus-visible {
+  outline: 1px solid white;
+}
+
 .search-form__label-text {
  /*текст утро день ночь*/
   min-height: 22px;
@@ -101,7 +102,7 @@ ul, ol {
   cursor: pointer;
 }
 .search-form__label-text:hover {
-  opacity: 0.5;
+  text-decoration: underline;
 }
 .search-form__textfield {
  /*спб например текст*/
@@ -117,9 +118,18 @@ ul, ol {
   border-bottom: 1px solid #FFF;
   border-right: none;
 }
+
 .search-form__textfield:hover {
-  opacity: 0.5;
+  text-decoration: underline;
 }
+/*в инструментах странциы отображается фокус*/
+.search-form__textfield:focus {
+  outline: none;
+}
+.search-form__textfield:focus-visible {
+  outline: 1px solid white;
+}
+
 .search-form__fieldset:first-of-type {
   margin: 0px;
   width: 225px;
@@ -142,15 +152,21 @@ ul, ol {
   margin: 0px 5px 0px 0px;
 }
 .search-form__pseudo-checkbox:hover {
-  opacity: 0.5;
+  text-decoration: underline;
 }
 .search-form__pseudo-checkbox-full {
   display: block;
   width: 15px;
   height: 15px;
-  background-color: white;
+  background-color: black;
   margin: 1px;
 }
+
+.search-form__pseudo-checkbox-full:active {
+  /*белый квадрат*/
+  background-color: white;
+}
+
 .search-form__submit-button {
  /*кнопка НАЙТИ*/
   width: 194px;
@@ -166,12 +182,21 @@ ul, ol {
   cursor: pointer;
   margin: 20px 0px 0px;
 }
-.search-form__submit-button:focus-visible {
-  outline: 3px solid tomato;
+
+.search-form__submit-button:active {
+  background-color: #545050;
 }
 .search-form__submit-button:hover {
-  opacity: 0.5;
+  text-decoration: underline;
 }
+/*фокусы отображаются в инструментах страницы*/
+.search-form__submit-button:focus {
+  outline: none;
+}
+.search-form__submit-button:focus-visible {
+  outline: 1px solid white;
+}
+
 .content__details {
  /*max width*/
   width: 399px;
@@ -204,10 +229,17 @@ ul, ol {
 }
 .content__list-item {
   max-width: 399px;
+  min-height: 107px;
 }
+
+/*скрыть скролл у content__list и виден фокус в инструментах страницы*/
 .content__list-item:focus {
-  outline: 3px solid tomato;
+  outline: none;
 }
+.content__list-item:focus-visible {
+  outline: 1px solid white;
+}
+
 .content__video-card {
   display: flex;
   flex-direction: row;
@@ -219,9 +251,11 @@ ul, ol {
  /*убрали подсветку синюю у текста*/
   text-decoration: none;
 }
-.content__video-card-description-container:focus-visible {
-  outline: 3px solid tomato;
+
+.content__video-card-description-container:active {
+  background-color: #545050;
 }
+
 .content__video-card-title {
  /* заголовок карточки */
   color: #FFF;
@@ -238,9 +272,11 @@ ul, ol {
  /*надпись ЗЕЛЕНГОГРАДСК разделить на несколько строк*/
   white-space: wrap;
 }
+
 .content__video-card-title:hover {
-  opacity: 0.5;
-}
+  text-decoration: underline;
+} 
+
 .content__video-card-description {
  /* подзаголовок карточки */
   color: #FFF;
@@ -254,9 +290,11 @@ ul, ol {
   text-decoration-color: #1B1919;
   cursor: pointer;
 }
+
 .content__video-card-description:hover {
-  opacity: 0.5;
+  text-decoration: underline;
 }
+
 .content__video-card-thumbnail {
  /* картинки в фотокарточках */
   object-fit: fill;
@@ -264,9 +302,7 @@ ul, ol {
  /*width: 194px;*/
   margin: 0px 2px 0px 0px;
 }
-.content__video-card-thumbnail:hover {
-  opacity: 0.5;
-}
+
 .more-button {
  /*показать ещё*/
   width: 399px;
@@ -286,6 +322,17 @@ ul, ol {
   border: 1px solid #FFF;
   cursor: pointer;
 }
+
+.more-button:active {
+  background-color: #545050;
+}
 .more-button:hover {
-  opacity: 0.5;
+  text-decoration: underline;
+}
+/*фокусы отображаются в инструментах страницы*/
+.more-button:focus {
+  outline: none;
+}
+.more-button:focus-visible {
+  outline: 1px solid white;
 }
