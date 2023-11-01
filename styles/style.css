@@ -291,12 +291,12 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
 .content__list {
   display: flex;
   flex-direction: column;
-  /*свойство для прокрутки*/
+  /*свойство для прокрутки
   overflow: auto;
-  /*скролл вертикальный*/
+  /*скролл вертикальный
   overflow-y: scroll;
-  /*скролл горизонтальный скрыт hidden*/
-  overflow-x: scroll;
+  /*скролл горизонтальный если скрыт кнопка выше нужного стоит если виден то не видно outline при фокусе
+  overflow-x: hidden; */
   max-width: 399px;
   margin: 0px;
   max-height: 290px;
@@ -319,9 +319,9 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
 
 .content__list-item {
   max-width: 394px;
-  min-height: 107px;
+  height: 103px;
   /*добавили сбоку 2пх чтоб виден был outline при focus-visible*/
-  margin: 0px 0px 30px 5px;
+  margin: 0px 0px 30px 0px;
   align-items: center;
 }
 
@@ -339,10 +339,29 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   outline-offset: 1px;
 }*/
 
-.content__card-link:active {
-  /*НЕ РАБОТАЕТ*/
+.content__list-item:focus {
+  outline: 1px solid white;
+  outline-offset: 1px;  
+}
+
+.content__list-item:focus-visible {
   background-color: #545050;
 }
+
+/* content__card-link-current:focus {
+  /*для ссылки
+  outline: none;
+  background-color: #545050;
+}
+
+.content__card-link-current:focus-visible {
+  outline: 1px solid white;
+  outline-offset: 1px;
+} */
+
+/* .content__list-item:hover .content__video-card-title {
+  text-decoration: underline;
+} */
 
 .content__card-link:hover .content__video-card-title {
   /*действует потому что тайтл находится внутри видео кард*/
@@ -354,27 +373,24 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   text-decoration: underline;
 }
 
-.content__card-link-current:focus {
-  /*для ссылки*/
-  outline: none;
-}
+/* .content__card-link:active .content__video-card {
+  background-color: #545050;
+} */
 
-.content__card-link-current:focus-visible {
-  outline: 1px solid white;
-  outline-offset: 1px;
-}
-
+/*.content__card-link .active-state {
+  background-color: #545050;
+} */
 
 .content__video-card {
   display: flex;
   flex-direction: row;
 }
 
-.content__video-card:active {
+/* .content__video-card:active {
   background-color: #545050;
-}
+} */
 
-/* .content__video-card:hover .content__video-card-title {
+/*.content__video-card:hover .content__video-card-title {
   /*действует потому что тайтл находится внутри видео кард
   text-decoration: underline;
 }
