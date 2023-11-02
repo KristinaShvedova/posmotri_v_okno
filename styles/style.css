@@ -52,17 +52,19 @@ ul, ol {
 .result__video-container {
   padding: 0px;
   margin: 70px 0px 16px;
-  max-height: 386px;
-  cursor: pointer;
-  max-width: 711px;
+  height: 386px;
+  width: 711px;
   /*индекс - при перезагрузке виден текст*/
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
 
 .result__video {
   width: 711px;
   height: 386px;
+  /*видео нормально расширилось*/
+  object-fit: cover;
 }
 
 .search-form {
@@ -91,10 +93,11 @@ ul, ol {
   /*заголовки город и время*/
   font-size: 17px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 100;
   line-height: normal;
   margin: 0px 0px 5px;
   font-family: "Fira Sans Condensed";
+  letter-spacing: 0.75px;
 }
 
 .search-form__checkbox-list {
@@ -156,6 +159,7 @@ ul, ol {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  letter-spacing: 0.5px;
   background-color: #1b1919;
   /*240 вместо 225 иначе р не видна*/
   width: 225px;
@@ -166,7 +170,7 @@ ul, ol {
   font-family: "Fira Sans Condensed";
   color: white;
   margin: 0px;
-  padding: 0px;
+  padding: 2px 0px 1px;
 }
 
 .search-form__textfield:active {
@@ -295,34 +299,25 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   overflow: auto;
   /*скролл вертикальный
   overflow-y: scroll;
-  /*скролл горизонтальный если скрыт кнопка выше нужного стоит если виден то не видно outline при фокусе
-  overflow-x: hidden; */
-  max-width: 399px;
+  /*скролл горизонтальный если скрыт кнопка выше нужного стоит если виден то не видно outline при фокусе*/
+  overflow-y: scroll;
+  overflow-x: scroll;
+  /*скролл 21пх занимает*/
+  width: 420px;
+  max-height: 311px;
   margin: 0px;
-  max-height: 290px;
+  /*max-height: 290px;*/
   /*индекс - при перезагрузке виден текст*/
   position: relative;
   z-index: 1;
+  padding: 0px;
 }
-
-/*.preloader-template {
-  position: relative;
-}
-    
-.preloader {
-  position: absolute;
-}
-  
-.preloader-chasing-squares {
-  position: absolute;
-}*/
 
 .content__list-item {
   max-width: 394px;
   height: 103px;
-  /*добавили сбоку 2пх чтоб виден был outline при focus-visible*/
-  margin: 0px 0px 30px 0px;
-  align-items: center;
+  /*добавили сбоку 5пх чтоб виден был outline при focus-visible*/
+  margin: 0px 5px 30px;
 }
 
 .content__list-item:first-of-type {
@@ -346,6 +341,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
 
 .content__list-item:focus-visible {
   background-color: #545050;
+  outline: none;
 }
 
 /* content__card-link-current:focus {
@@ -384,6 +380,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
 .content__video-card {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 /* .content__video-card:active {
@@ -402,7 +399,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
 
 .content__video-card-description-container {
   /*контейнер с подписями карточек*/
-  width: 200px;
+  max-width: 194px;
   /*убрали подсветку*/
   text-decoration: none;
 }
@@ -440,7 +437,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   /*картинки в фотокарточках*/
   object-fit: fill;
   height: 103px;
-  /*width: 194px;*/
+  width: 194px;
   margin: 0px 2px 0px 0px;
 }
 
