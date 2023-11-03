@@ -29,10 +29,6 @@ ul, ol {
   list-style: none;
 }
 
- /*границы
- * {
-  outline: 1px solid red;} */
-
 *a {
   text-decoration: none;
 }
@@ -77,11 +73,6 @@ ul, ol {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  /*position: relative;
-  z-index: 1;*/
-  /*чтоб видео не вылезало за границы
-  margin: 0px;
-  padding: 16px 0px 0px; */
   background-color: #1b1919;
 }
 
@@ -117,11 +108,6 @@ ul, ol {
 .search-form__checkbox-list:focus-visible {
   outline: none;
 }
-
-/*.search-form__checkbox-list:hover .search-form__label-text {
-  /*действует потому что лэйбл текст внутри чекбокс списка находится
-  text-decoration: underline;
-}*/
 
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline;
@@ -178,16 +164,6 @@ ul, ol {
 .search-form__textfield:active {
   outline: 1px solid white;
 }
-
-/* .search-form__textfield:focus {
-  /*в инструментах страницы отображается фокус
-  outline: none;
-}
-
-.search-form__textfield:focus-visible {
-  outline: 1px solid white;
-  outline-offset: 1px;
-} */
 
 .search-form__fieldset:first-of-type {
   margin: 0px;
@@ -303,7 +279,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   overflow-y: scroll;
   /*скролл 21пх занимает*/
   width: 420px;
-  max-height: 295px;
+  max-height: 293px;
   margin: 0px;
   /*индекс - при перезагрузке виден текст*/
   position: relative;
@@ -360,29 +336,11 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   text-decoration: underline;
 }
 
-/* .content__card-link:active .content__video-card {
-  background-color: #545050;
-} */
-
 .content__video-card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-
-/* .content__video-card:active {
-  background-color: #545050;
-} */
-
-/*.content__video-card:hover .content__video-card-title {
-  /*действует потому что тайтл находится внутри видео кард
-  text-decoration: underline;
-}
-
-.content__video-card:hover .content__video-card-description {
-  /*действует потому что сабтайтл находится внутри видео кард
-  text-decoration: underline;
-} */
 
 .content__video-card-description-container {
   /*контейнер с подписями карточек*/
@@ -431,7 +389,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
 .more-button {
   /*показать ещё*/
   width: 394px;
-  padding: 0px;
+  padding: 2px 0px 0px;
   /*чтоб outline был виден*/
   margin: 0px 4px 4px;
   display: flex;
@@ -440,20 +398,3 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   gap: 30px;
   flex-shrink: 0;
 }
-
-/*.more-button:active {
-  background-color: #545050;
-}
-
-.more-button:hover {
-  text-decoration: underline;
-}
-
-.more-button:focus {
-  outline: none;
-}
-
-.more-button:focus-visible {
-  outline: 1px solid white;
-  outline-offset: 1px;
-}*/
