@@ -109,12 +109,12 @@ ul, ol {
   flex-direction: row;
 }
 
-.day:focus {
+.search-form__label:focus {
   /*только дня утро день ночь*/
   outline: none;
 }
 
-.day:focus-visible {
+.search-form__label:focus-visible {
   outline: 1px solid white;
   outline-offset: 1px;
 }
@@ -392,7 +392,4 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   padding: 0px;
   /*чтоб outline был виден*/
   margin: 0px 4px 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
