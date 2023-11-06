@@ -326,14 +326,28 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   outline-offset: 1px;
 }
 
+.content__card-link_current .content__video-card-title {
+  /*чтоб у активных карточек изначально не видно было подчеркивание*/
+  text-decoration: underline;
+  text-decoration-color: #545050;
+}
+
+.content__card-link_current .content__video-card-description {
+  /*чтоб у активных карточек изначально не видно было подчеркивание*/
+  text-decoration: underline;
+  text-decoration-color: #545050;
+}
+
 .content__card-link:hover .content__video-card-title {
   /*действует потому что тайтл находится внутри видео кард*/
   text-decoration: underline;
+  text-decoration-color: white;
 }
 
 .content__card-link:hover .content__video-card-description {
   /*действует потому что сабтайтл находится внутри видео кард*/
   text-decoration: underline;
+  text-decoration-color: white;
 }
 
 .content__video-card {
