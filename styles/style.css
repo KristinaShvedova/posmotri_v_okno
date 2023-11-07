@@ -110,6 +110,7 @@ ul, ol {
 
 .search-form__label:has(:focus) {
   /*только дня утро день ночь*/
+  content: '';
   outline: none;
 }
 
