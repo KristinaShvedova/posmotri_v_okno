@@ -99,22 +99,23 @@ ul, ol {
   gap: 14px;
 }
 
-.search-form__label:hover .search-form__label-text {
-  text-decoration: underline;
-}
-
 .search-form__label {
   /*встали в один ряд квадраты и утро день ночь*/
   display: flex;
   flex-direction: row;
+  min-height: 25px;
+  margin: 0px;
+  background-color: #1b1919;
 }
 
-.search-form__label:focus {
+.search-form__label:has(:focus) {
   /*только дня утро день ночь*/
   outline: none;
 }
 
-.search-form__label:focus-visible {
+.search-form__label:has(:focus-visible) {
+  /*has - псевдокласс родительского элеиента*/
+  content: '';
   outline: 1px solid white;
   outline-offset: 1px;
 }
@@ -129,6 +130,10 @@ ul, ol {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
 }
 
 .search-form__textfield {
